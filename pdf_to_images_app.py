@@ -16,10 +16,8 @@ if st.button("Convert PDF to Images"):
         os.makedirs(folder_path, exist_ok=True)
         
         try:
-            poppler_path = os.path.join(os.getcwd(), "poppler")
-            pages = convert_from_bytes(
-                pdf_file.read(),
-                poppler_path=poppler_path
+            pages = convert_from_bytes(pdf_file.read())
+
             )
             
             for i, page in enumerate(pages):
