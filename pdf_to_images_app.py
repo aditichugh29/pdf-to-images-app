@@ -17,8 +17,6 @@ if st.button("Convert PDF to Images"):
         
         try:
             pages = convert_from_bytes(pdf_file.read())
-
-            )
             
             for i, page in enumerate(pages):
                 image_path = os.path.join(folder_path, f"page_{i+1}.png")
